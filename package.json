@@ -1,0 +1,20 @@
+{
+  "name": "selfhosted_templates",
+  "version": "1.0.0",
+  "description": "Portainer Templates for Selfhosted Projects/Homelabs.",
+  "private": true,
+  "devDependencies": {
+    "jsonlint": "^1.6.3",
+    "yaml-validator": "^3.0.0"
+  },
+  "scripts": {
+    "pretest": "jsonlint Template/template.json --quiet",
+    "test": "yaml-validator Template/Stack/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SelfhostedPro/selfhosted_templates.git"
+  },
+  "author": "Qballjos",
+  "license": "GPLv3"
+}

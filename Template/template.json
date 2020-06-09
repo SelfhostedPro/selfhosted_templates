@@ -1832,63 +1832,6 @@
   },
   {
     "type": 1,
-    "title": "libresonic",
-    "name": "libresonic",
-    "description": "Libresonic is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.\r\n\r\n/music - Location of music.\r\n/media - Location of other media.\r\n/podcasts - Location of podcasts.\r\n/playlists - Location for playlists storage.\r\nCONTEXT_PATH for setting url-base in reverse proxy setups - (optional)\r\n\r\nDefault user/pass is admin/admin",
-    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/libresonic.png",
-    "image": "linuxserver/libresonic:latest",
-    "categories": [
-      "Music"
-    ],
-    "platform": "linux",
-    "restart_policy": "unless-stopped",
-    "ports": [
-      "4040/tcp"
-    ],
-    "volumes": [
-      {
-        "container": "/music",
-        "bind": "/portainer/Music"
-      },
-      {
-        "container": "/playlists",
-        "bind": "/portainer/Files/AppData/Libresonic/Playlists"
-      },
-      {
-        "container": "/podcasts",
-        "bind": "/portainer/Podcasts"
-      },
-      {
-        "container": "/media",
-        "bind": "/portainer/Files/AppData/Libresonic/Media"
-      },
-      {
-        "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/Libresonic"
-      }
-    ],
-    "env": [
-      {
-        "name": "CONTEXT_PATH",
-        "label": "CONTEXT_PATH",
-        "set": ""
-      },
-      {
-        "name": "PUID",
-        "label": "PUID",
-        "default": "1000",
-        "preset": true
-      },
-      {
-        "name": "PGID",
-        "label": "PGID",
-        "default": "100",
-        "preset": true
-      }
-    ]
-  },
-  {
-    "type": 1,
     "title": "lidarr",
     "name": "lidarr",
     "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
@@ -3093,11 +3036,11 @@
   },
   {
     "type": 1,
-    "title": "sickrage",
-    "name": "sickrage",
+    "title": "sickchill",
+    "name": "sickchill",
     "description": "Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.",
-    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sickrage-icon.png",
-    "image": "linuxserver/sickrage:latest",
+    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sickchill-icon.png",
+    "image": "linuxserver/sickchill:latest",
     "categories": [
       "Downloaders",
       "Video"
@@ -3110,7 +3053,7 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "/portainer/Files/AppData/Config/SickRage"
+        "bind": "/portainer/Files/AppData/Config/SickChill"
       },
       {
         "container": "/downloads",
@@ -3674,6 +3617,51 @@
       {
         "name": "PORT",
         "label": "PORT"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "title": "SickGear",
+    "name": "sickgear",
+    "description": "SickGear provides management of TV shows and/or Anime, it detects new episodes, links downloader apps, and more.",
+    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sickgear-icon.png",
+    "image": "linuxserver/sickgear:latest",
+    "categories": [
+      "Downloaders",
+      "Video"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      "8081/tcp"
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+        "bind": "/portainer/Files/AppData/Config/SickGear"
+      },
+      {
+        "container": "/tv",
+        "bind": "/portainer/TV"
+      },
+      {
+        "container": "/downloads",
+        "bind": "/portainer/Downloads"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "1000",
+        "preset": true
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "100",
+        "preset": true
       }
     ]
   }
