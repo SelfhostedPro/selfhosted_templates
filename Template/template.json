@@ -68,8 +68,7 @@
     "image": "linuxserver/embystat:latest",
     "categories": [
       "Other",
-      "Tools",
-      "Authentication"
+      "Tools"
     ],
     "platform": "linux",
     "restart_policy": "unless-stopped",
@@ -89,6 +88,36 @@
       }
     ],
     "note": "Access the webui at your-ip:6555. Follow the setup wizard on initial install. Then configure the required services."
+  },
+  {
+    "type": 1,
+    "title": "Snibox",
+    "name": "Snibox",
+    "description": "Self-hosted snippet manager.",
+    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/snibox.png",
+    "image": "snowmean/snibox-sqlite:latest",
+    "categories": [
+      "Other",
+      "Tools"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      "6555:6555/tcp"
+    ],
+    "volumes": [
+      {
+        "container": "/app/db/database",
+        "bind": "/portainer/Files/AppData/Config/Snibox"
+      }
+    ],
+    "env": [
+      {
+        "name": "TZ",
+        "label": "TZ"
+      }
+    ],
+    "note": "Label-oriented interface with search. Supports various programming languages, markdown, plain text."
   },
   {
     "type": 1,
@@ -291,6 +320,7 @@
       "Wiki"
     ],
     "platform": "linux",
+    "note": "Default login is admin@admin.com with a password of password. The database created is called bookstackapp and the database user is called bookstack",
     "env": [
       {
         "name": "PUID",
@@ -319,7 +349,6 @@
         "label": "PORT"
       }
     ],
-    "note": "Default login is admin@admin.com with a password of password. The database created is called bookstackapp and the database user is called bookstack",
     "repository": {
       "url": "https://github.com/SelfhostedPro/selfhosted_templates",
       "stackfile": "Template/Stack/bookstack.yml"
@@ -335,18 +364,6 @@
       "Books"
     ],
     "platform": "linux",
-    "env": [
-      {
-        "name": "PUID",
-        "label": "PUID",
-        "default": "1000"
-      },
-      {
-        "name": "PGID",
-        "label": "PGID",
-        "default": "100"
-      }
-    ],
     "name": "cops",
     "image": "linuxserver/cops:latest",
     "restart_policy": "unless-stopped",
@@ -361,6 +378,18 @@
       {
         "container": "/config",
         "bind": "/portainer/Files/AppData/Config/Cops"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "1000"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "100"
       }
     ]
   },
@@ -904,18 +933,6 @@
     ],
     "platform": "linux",
     "restart_policy": "unless-stopped",
-    "env": [
-      {
-        "name": "PUID",
-        "label": "PUID",
-        "default": "1000"
-      },
-      {
-        "name": "PGID",
-        "label": "PGID",
-        "default": "100"
-      }
-    ],
     "ports": [
       "8200:8200/tcp"
     ],
@@ -932,6 +949,18 @@
       },
       {
         "container": "/source"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "1000"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "100"
       }
     ]
   },
@@ -1279,9 +1308,6 @@
     ],
     "platform": "linux",
     "restart_policy": "unless-stopped",
-    "ports": [
-      "8902:8080/tcp"
-    ],
     "volumes": [
       {
         "container": "/www/assets",
@@ -1291,6 +1317,9 @@
         "container": "/www/config.yml",
         "bind": "/portainer/Files/AppData/Config/Homer"
       }
+    ],
+    "ports": [
+      "8902:8080/tcp"
     ],
     "note": "This container requires a yml file within the config volume. See the documentation here https://github.com/bastienwirtz/homer"
   },
@@ -1336,7 +1365,6 @@
   {
     "type": 1,
     "title": "Jellyfin",
-    "name": "jellyfin",
     "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.",
     "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/jellyfin.png",
     "image": "linuxserver/jellyfin:latest",
@@ -1347,10 +1375,6 @@
     ],
     "platform": "linux",
     "restart_policy": "unless-stopped",
-    "ports": [
-      "8096:8096/tcp",
-      "8920:8920/tcp"
-    ],
     "volumes": [
       {
         "container": "/config",
@@ -1380,6 +1404,11 @@
         "name": "TZ",
         "label": "TZ"
       }
+    ],
+    "name": "jellyfin",
+    "ports": [
+      "8096:8096/tcp",
+      "8920:8920/tcp"
     ]
   },
   {
@@ -1429,6 +1458,18 @@
     ],
     "platform": "linux",
     "restart_policy": "unless-stopped",
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "1000"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "100"
+      }
+    ],
     "ports": [
       "5299:5299/tcp"
     ],
@@ -1441,18 +1482,6 @@
       },
       {
         "container": "/books"
-      }
-    ],
-    "env": [
-      {
-        "name": "PUID",
-        "label": "PUID",
-        "default": "1000"
-      },
-      {
-        "name": "PGID",
-        "label": "PGID",
-        "default": "100"
       }
     ]
   },
@@ -1565,9 +1594,6 @@
     ],
     "platform": "linux",
     "restart_policy": "unless-stopped",
-    "ports": [
-      "80/tcp"
-    ],
     "volumes": [
       {
         "container": "/config",
@@ -1589,6 +1615,9 @@
         "label": "PGID",
         "default": "100"
       }
+    ],
+    "ports": [
+      "80/tcp"
     ]
   },
   {
@@ -2591,9 +2620,6 @@
     ],
     "platform": "linux",
     "restart_policy": "unless-stopped",
-    "ports": [
-      "443/tcp"
-    ],
     "volumes": [
       {
         "container": "/config",
@@ -2615,6 +2641,9 @@
         "label": "PGID",
         "default": "100"
       }
+    ],
+    "ports": [
+      "443/tcp"
     ]
   },
   {
@@ -2837,9 +2866,6 @@
     ],
     "platform": "linux",
     "restart_policy": "unless-stopped",
-    "ports": [
-      "8081:8081/tcp"
-    ],
     "volumes": [
       {
         "container": "/config",
@@ -2865,6 +2891,9 @@
         "label": "PGID",
         "default": "100"
       }
+    ],
+    "ports": [
+      "8081:8081/tcp"
     ]
   },
   {
@@ -3458,15 +3487,15 @@
   {
     "type": 1,
     "title": "Whoogle",
-    "name": "whoogle",
     "description": "Self-hosted, ad-free, privacy-respecting Google metasearch engine.",
     "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/whoogle.png",
-    "image": "benbusby/whoogle-search:latest",
     "categories": [
       "Other",
       "Tools"
     ],
     "platform": "linux",
+    "name": "whoogle",
+    "image": "benbusby/whoogle-search:latest",
     "restart_policy": "unless-stopped",
     "volumes": [
       {
