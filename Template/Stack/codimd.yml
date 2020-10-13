@@ -1,0 +1,35 @@
+version: "2"
+services:
+  mariadb:
+    image: linuxserver/mariadb:latest
+    container_name: codimd_mariadb
+    restart: unless-stopped
+    volumes:
+      - ${MARIADB_VOLUME}:/config
+    environment:
+      - MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}
+      - MYSQL_DATABASE=codimd
+      - MYSQL_USER=codimd
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - PGID=${PGID}
+      - PUID=${PUID}
+      - TZ=${TZ}
+  codimd:
+    image: linuxserver/codimd:latest
+    container_name: codimd
+    restart: unless-stopped
+    depends_on:
+      - mariadb
+    volumes:
+      - ${CODIMD_VOLUME}:/config
+    environment:
+      - DB_HOST=mariadb
+      - DB_USER=codimd
+      - DB_PASS=${DB_PASSWORD}
+      - DB_NAME=codimd
+      - DB_PORT=3306
+      - PGID=${PGID}
+      - PUID=${PUID}
+      - TZ=${TZ}
+    ports:
+      - "${PORT}:3000"
