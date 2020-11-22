@@ -277,6 +277,79 @@
   },
   {
     "type": 1,
+    "title": "Handbrake",
+    "name": "handbrake",
+    "description": "This is a Docker container for HandBrake. The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client. A fully automated mode is also available: drop files into a watch folder and let HandBrake process them without any user interaction.",
+    "logo": "https://camo.githubusercontent.com/521d772157fefffb5c01c66b57ae898a1b156ffeee6ce54f5e75401ae6e4eb81/68747470733a2f2f696d616765732e7765736572762e6e6c2f3f75726c3d7261772e67697468756275736572636f6e74656e742e636f6d2f6a6c65736167652f646f636b65722d74656d706c617465732f6d61737465722f6a6c65736167652f696d616765732f68616e646272616b652d69636f6e2e706e6726773d323030",
+    "image": "jlesage/handbrake:latest",
+    "categories": [
+      "Video"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+      "WebUI": "5800:5800/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/watch",
+        "bind": "!downloads"
+      },
+      {
+        "container": "/output",
+        "bind": "!tv"
+      },
+      {
+        "container": "/data",
+        "bind": "!data/handbrake/"
+      },
+      {
+        "container": "/config",
+        "bind": "!config/handbrake/"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "!PUID"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID"
+      },
+      {
+        "name": "AUTOMATED_CONVERSION_FORMAT",
+        "label": "AUTOMATED_CONVERSION_FORMAT",
+        "default": "mp4"
+      },
+      {
+        "name": "AUTOMATED_CONVERSION_OUTPUT_SUBDIR",
+        "label": "AUTOMATED_CONVERSION_OUTPUT_SUBDIR",
+        "default": "SAME_AS_SRC"
+      },
+      {
+        "name": "AUTOMATED_CONVERSION_PRESET",
+        "label": "AUTOMATED_CONVERSION_PRESET",
+        "default": "General/Very Fast 720p30"
+      },
+      {
+        "name": "AUTOMATED_CONVERSION_KEEP_SOURCE",
+        "label": "AUTOMATED_CONVERSION_KEEP_SOURCE",
+        "default": "1"
+      },
+      {
+        "name": "AUTOMATED_CONVERSION_NON_VIDEO_FILE_ACTION",
+        "label": "AUTOMATED_CONVERSION_NON_VIDEO_FILE_ACTION",
+        "default": "ignore"
+     }
+    ]
+  },
+  {
+    "type": 1,
     "title": "Headphones",
     "name": "headphones",
     "description": null,
