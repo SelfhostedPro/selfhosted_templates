@@ -1210,24 +1210,36 @@
     ]
   },
   {
-    "type": 3,
-    "title": "Nextcloud",
-    "name": "nextcloud",
-    "description": "Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices.",
-    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nextcloud-icon.png",
+    "type": 1,
+    "title": "Netdata",
+    "name": "Netdata",
+    "description": "Real-time performance monitoring, done right!",
+	  "description": "- real-time, per second updates, snappy refreshes!",
+	  "description": "- 300+ charts out of the box, 2000+ metrics monitored!",
+	  "description": "- zero configuration, zero maintenance, zero dependencies!",
+	  "notes":  "Live demo: http://netdata.firehol.org",
+	  "notes": "If you want to have your container names resolved by netdata it needs to have access to docker group. To achive that just add environment variable PGID=999 to netdata container, where 999 is a docker group id from your host. This number can be found by running: grep docker /etc/group | cut -d ':' -f 3",
+    "logo": "https://user-images.githubusercontent.com/1153921/95268672-a3665100-07ec-11eb-8078-db619486d6ad.png",
     "categories": [
-      "Cloud",
-      "Productivity",
       "Tools",
       "Other",
       "Web"
     ],
-    "note": "The database user is nextcloud and the database is nextcloud_db. The host of the database will be located at the bottom of the DB conotainer in portainer.",
     "platform": "linux",
-    "repository": {
-      "url": "https://github.com/SelfhostedPro/selfhosted_templates",
-      "stackfile": "Template/Stack/nextcloud.yml"
-    },
+    "restart_policy": "unless-stopped",
+    "ports": [
+      "19999:19999/tcp"
+     ],
+	"volumes": [
+      {
+        "container": "/host/proc",
+        "bind": "/proc"
+      },
+      {
+        "container": "/host/sys",
+        "bind": "/sys"
+      }
+    ],
     "env": [
       {
         "name": "PUID",
@@ -1241,19 +1253,62 @@
       },
       {
         "name": "TZ",
-        "label": "TZ"
+        "label": "TZ",
+		"default": "AMERICA/NEW_YORK"
       },
       {
-        "name": "DATABASE_PASSWORD",
-        "label": "DATABASE_PASSWORD"
+        "name": "Do Not Track",
+        "label": "DO_NOT_TRACK",
+		"default": "0"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "title": "NextCloud",
+    "name": "NextCloud",
+    "description": "A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms.",
+    "logo": "https://camo.githubusercontent.com/cad5e57747f16cec8b003ccad47b11b7edfbb83707fc84a67f5147f733d9c117/68747470733a2f2f63646e2e7261776769742e636f6d2f6e657874636c6f75642f646f636b65722f383064643538376438343762313834626139356437313837613261376135366165346362626237622f6c6f676f2e737667",
+    "image": "nextcloud",
+    "categories": [
+      "Cloud"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+      "WebUI": "4433:443/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+        "bind": "!config/nextcloud"
+      },
+       {
+        "container": "/apps",
+        "bind": "!config/nextcloud/apps"
+      },
+       {
+        "container": "/data",
+        "bind": "path to shared folder"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "!PUID"
       },
       {
-        "name": "MYSQL_ROOT_PASSWORD",
-        "label": "MYSQL_ROOT_PASSWORD"
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID"
       },
       {
-        "name": "PORT",
-        "label": "PORT"
+        "name": "TZ",
+        "label": "TZ",
+        "default": "America/New_York"
       }
     ]
   },
