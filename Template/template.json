@@ -13,7 +13,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -40,23 +40,23 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Music",
+					"bind": "/mnt/data/appdata/airsonic/music",
 					"container": "/music"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Airsonic/Playlists",
+					"bind": "/mnt/data/appdata/airsonic/playlists",
 					"container": "/playlists"
 				},
 				{
-					"bind": "/portainer/Podcasts",
+					"bind": "/mnt/data/appdata/airsonic/podcasts",
 					"container": "/podcasts"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Airsonic/Media",
+					"bind": "/mnt/data/appdata/airsonic/media",
 					"container": "/media"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Airsonic/",
+					"bind": "/mnt/data/config/airsonic",
 					"container": "/config"
 				}
 			]
@@ -87,7 +87,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Authelia",
+					"bind": "/mnt/data/config/authelia",
 					"container": "/etc/authelia/"
 				}
 			]
@@ -105,7 +105,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -126,15 +126,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Bazarr",
+					"bind": "/mnt/data/config/bazarr",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/mnt/data/appdata/bazarr/tv",
 					"container": "/tv"
 				},
 				{
-					"bind": "/portainer/Movies",
+					"bind": "/mnt/data/appdata/bazarr/movies",
 					"container": "/movies"
 				}
 			]
@@ -151,7 +151,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -168,15 +168,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Beets",
+					"bind": "/mnt/data/config/beets",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/beets/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/portainer/Music",
+					"bind": "/mnt/data/appdata/beets/music",
 					"container": "/music"
 				}
 			]
@@ -200,7 +200,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Bitwarden-rs",
+					"bind": "/mnt/data/config/bitwarden-rs",
 					"container": "/config"
 				}
 			]
@@ -218,7 +218,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -240,15 +240,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Books",
+					"bind": "/mnt/data/appdata/booksonic/books",
 					"container": "/books"
 				},
 				{
-					"bind": "/portainer/Files/Podcasts",
+					"bind": "/mnt/data/appdata/booksonic/podcasts",
 					"container": "/podcast"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Booksonic",
+					"bind": "/mnt/data/config/booksonic",
 					"container": "/config"
 				}
 			]
@@ -272,7 +272,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/EmbyStat",
+					"bind": "/mnt/data/config/embystat",
 					"container": "/config"
 				}
 			]
@@ -289,7 +289,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -306,15 +306,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Headphones",
+					"bind": "/mnt/data/config/headphones",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/downloads",
 					"container": "/Downloads"
 				},
 				{
-					"bind": "/portainer/Music",
+					"bind": "/mnt/data/appdata/music",
 					"container": "/music"
 				}
 			]
@@ -333,7 +333,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -351,7 +351,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Heimdall",
+					"bind": "/mnt/data/config/heimdall",
 					"container": "/config"
 				}
 			]
@@ -375,11 +375,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Homer/assets",
+					"bind": "/mnt/data/config/homer/assets",
 					"container": "/www/assets"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Homer",
+					"bind": "/mnt/data/config/homer",
 					"container": "/www/config.yml"
 				}
 			]
@@ -402,7 +402,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/huginn",
+					"bind": "/mnt/data/config/huginn",
 					"container": "/var/lib/mysql"
 				}
 			]
@@ -467,7 +467,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -484,11 +484,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Jackett",
+					"bind": "/mnt/data/config/jackett",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/jackett/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -507,7 +507,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -529,15 +529,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Jelllyfin",
+					"bind": "/mnt/data/config/jelllyfin",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/mnt/data/appdata/jelllyfin/tv",
 					"container": "/data/tvshows"
 				},
 				{
-					"bind": "/portainer/Movies",
+					"bind": "/mnt/data/appdata/jelllyfin/movies",
 					"container": "/data/movies"
 				}
 			]
@@ -554,7 +554,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -572,7 +572,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Kodi",
+					"bind": "/mnt/data/config/kodi",
 					"container": "/config"
 				}
 			]
@@ -589,7 +589,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -606,12 +606,15 @@
 			"type": 1,
 			"volumes": [
 				{
+					"bind": "/mnt/data/config/lazylibrarian",
 					"container": "/config"
 				},
 				{
+					"bind": "/mnt/data/appdata/lazylibrarian/downloads",
 					"container": "/downloads"
 				},
 				{
+					"bind": "/mnt/data/appdata/lazylibrarian/books",
 					"container": "/books"
 				}
 			]
@@ -654,7 +657,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -682,7 +685,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/LetsEncrypt",
+					"bind": "/mnt/data/config/letsencrypt",
 					"container": "/config"
 				}
 			]
@@ -705,7 +708,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/LibreSpeed",
+					"bind": "/mnt/data/config/librespeed",
 					"container": "/config"
 				}
 			]
@@ -725,7 +728,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -742,11 +745,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Lychee",
+					"bind": "/mnt/data/config/lychee",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Pictures",
+					"bind": "/mnt/data/appdata/lychee/pictures",
 					"container": "/pictures"
 				}
 			]
@@ -764,7 +767,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -786,7 +789,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Mariadb",
+					"bind": "/mnt/data/config/mariadb",
 					"container": "/config"
 				}
 			]
@@ -803,7 +806,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -838,7 +841,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -855,15 +858,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Medusa",
+					"bind": "/mnt/data/config/medusa",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/mnt/data/appdata/medusa/tv",
 					"container": "/tv"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/medusa/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -880,7 +883,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -915,7 +918,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -951,11 +954,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Mstream",
+					"bind": "/mnt/data/config/mstream",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/mstream/downloads",
 					"container": "/music"
 				}
 			]
@@ -974,7 +977,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -1000,15 +1003,15 @@
 					"container": "/etc/localtime"
 				},
 				{
-					"bind": "/portainer/Files/Config/Murmur",
+					"bind": "/mnt/data/config/murmur",
 					"container": "/opt/murmur/config"
 				},
 				{
-					"bind": "/portainer/Files/Murmur/data",
+					"bind": "/mnt/data/appdata/murmur/data",
 					"container": "/opt/murmur/data"
 				},
 				{
-					"bind": "/portainer/Files/Murmur/log",
+					"bind": "/mnt/data/appdata/murmur/log",
 					"container": "/opt/murmur/log"
 				}
 			]
@@ -1032,7 +1035,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1049,11 +1052,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/MusicBrainz",
+					"bind": "/mnt/data/config/musicbrainz",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/AppData/MusicBrainz",
+					"bind": "/mnt/data/appdata/musicbrainz",
 					"container": "/data"
 				}
 			]
@@ -1073,7 +1076,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1090,7 +1093,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Muximux",
+					"bind": "/mnt/data/config/muximux",
 					"container": "/config"
 				}
 			]
@@ -1108,7 +1111,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1125,15 +1128,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Mylar",
+					"bind": "/mnt/data/config/mylar",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/mylar/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/portainer/Comics",
+					"bind": "/mnt/data/appdata/mylar/comics",
 					"container": "/comics"
 				}
 			]
@@ -1154,7 +1157,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -1199,7 +1202,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1217,7 +1220,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Nginx",
+					"bind": "/mnt/data/config/nginx",
 					"container": "/config"
 				}
 			]
@@ -1242,7 +1245,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Nginx-Proxy",
+					"bind": "/mnt/data/config/nginx-proxy",
 					"container": "/config"
 				}
 			]
@@ -1259,7 +1262,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1276,11 +1279,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Nzbget",
+					"bind": "/mnt/data/config/nzbget",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/nzbget/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -1299,7 +1302,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1316,11 +1319,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Nzbhydra2",
+					"bind": "/mnt/data/config/nzbhydra2",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/nzbhydra2/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -1340,7 +1343,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1357,7 +1360,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Ombi",
+					"bind": "/mnt/data/config/ombi",
 					"container": "/config"
 				}
 			]
@@ -1379,7 +1382,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1398,7 +1401,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/OpenVPN-AS",
+					"bind": "/mnt/data/config/openvpn-as",
 					"container": "/config"
 				}
 			]
@@ -1416,7 +1419,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1433,7 +1436,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Organizr",
+					"bind": "/mnt/data/config/organizr",
 					"container": "/config"
 				}
 			]
@@ -1450,7 +1453,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1468,7 +1471,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/OScam",
+					"bind": "/mnt/data/config/oscam",
 					"container": "/config"
 				}
 			]
@@ -1485,7 +1488,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1502,15 +1505,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Pictures",
+					"bind": "/mnt/data/appdata/photoshow/pictures",
 					"container": "/Pictures"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Photoshow/Thumbs",
+					"bind": "/mnt/data/appdata/photoshow/thumbs",
 					"container": "/Thumbs"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/PhotoShow",
+					"bind": "/mnt/data/config/photoshow",
 					"container": "/config"
 				}
 			]
@@ -1534,7 +1537,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Snibox",
+					"bind": "/mnt/data/config/snibox",
 					"container": "/app/db/database"
 				}
 			]
@@ -1551,7 +1554,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -1596,7 +1599,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -1660,7 +1663,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Chowdown",
+					"bind": "/mnt/data/config/chowdown",
 					"container": "/config"
 				}
 			]
@@ -1678,7 +1681,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1695,11 +1698,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Books",
+					"bind": "/mnt/data/appdata/calibre-web/books",
 					"container": "/books"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Calibre-web",
+					"bind": "/mnt/data/config/calibre-web",
 					"container": "/config"
 				}
 			]
@@ -1716,7 +1719,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1733,7 +1736,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Cardigann",
+					"bind": "/mnt/data/config/cardigann",
 					"container": "/config"
 				}
 			]
@@ -1785,7 +1788,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Code-Server",
+					"bind": "/mnt/data/config/code-server",
 					"container": "/config"
 				}
 			]
@@ -1802,7 +1805,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1819,7 +1822,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Codiad",
+					"bind": "/mnt/data/config/codiad",
 					"container": "/config"
 				}
 			]
@@ -1837,7 +1840,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1854,11 +1857,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Books",
+					"bind": "/mnt/data/appdata/cops/books",
 					"container": "/books"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Cops",
+					"bind": "/mnt/data/config/cops",
 					"container": "/config"
 				}
 			]
@@ -1876,7 +1879,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1893,15 +1896,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Couchpotato",
+					"bind": "/mnt/data/config/couchpotato",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/couchpotato/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/portainer/Movies",
+					"bind": "/mnt/data/appdata/couchpotato/movies",
 					"container": "/movies"
 				}
 			]
@@ -1918,7 +1921,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1932,11 +1935,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Daapd",
+					"bind": "/mnt/data/config/daapd",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Music",
+					"bind": "/mnt/data/appdata/daapd/music",
 					"container": "/music"
 				}
 			]
@@ -1959,7 +1962,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Dashmachine",
+					"bind": "/mnt/data/config/dashmachine",
 					"container": "/dashmachine/dashmachine/user_data"
 				}
 			]
@@ -1978,7 +1981,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -1995,11 +1998,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Davos",
+					"bind": "/mnt/data/config/davos",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/davos/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -2023,11 +2026,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/DeeMix",
+					"bind": "/mnt/data/config/deemix",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/deemix/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -2044,7 +2047,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -2063,11 +2066,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Deluge",
+					"bind": "/mnt/data/config/deluge",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/deluge/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -2085,7 +2088,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2104,7 +2107,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Domoticz",
+					"bind": "/mnt/data/config/domoticz",
 					"container": "/config"
 				}
 			]
@@ -2132,7 +2135,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2161,7 +2164,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2178,16 +2181,19 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Duplicati",
+					"bind": "/mnt/data/config/duplicati",
 					"container": "/config"
 				},
 				{
+					"bind": "/mnt/data/appdata/duplicati/tmp",
 					"container": "/tmp"
 				},
 				{
+					"bind": "/mnt/data/appdata/duplicati/backups",
 					"container": "/backups"
 				},
 				{
+					"bind": "/mnt/data/appdata/duplicati/source",
 					"container": "/source"
 				}
 			]
@@ -2206,7 +2212,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -2228,15 +2234,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Emby",
+					"bind": "/mnt/data/config/emby",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/mnt/data/appdata/emby/tv",
 					"container": "/data/tvshows"
 				},
 				{
-					"bind": "/portainer/Movies",
+					"bind": "/mnt/data/appdata/emby/movies",
 					"container": "/data/movies"
 				}
 			]
@@ -2260,11 +2266,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/FileBrowser",
+					"bind": "/mnt/data/config/filebrowser",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config",
+					"bind": "/mnt/data/appdata/filebrowser/myfiles",
 					"container": "/myfiles"
 				}
 			]
@@ -2281,7 +2287,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2298,7 +2304,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/freshrss",
+					"bind": "/mnt/data/config/freshrss",
 					"container": "/config"
 				}
 			]
@@ -2317,7 +2323,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2331,15 +2337,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Gazee",
+					"bind": "/mnt/data/config/gazee",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Comics",
+					"bind": "/mnt/data/appdata/gazee/comics",
 					"container": "/comics"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Gazee",
+					"bind": "/mnt/data/appdata/gazee/mylar",
 					"container": "/mylar"
 				}
 			]
@@ -2358,7 +2364,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -2379,7 +2385,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Grocy",
+					"bind": "/mnt/data/config/grocy",
 					"container": "/config"
 				}
 			]
@@ -2403,7 +2409,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Guacamole",
+					"bind": "/mnt/data/config/guacamole",
 					"container": "/config"
 				}
 			]
@@ -2422,7 +2428,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2439,7 +2445,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/HTPCmanager",
+					"bind": "/mnt/data/config/htpcmanager",
 					"container": "/config"
 				}
 			]
@@ -2457,7 +2463,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2474,15 +2480,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Lidarr",
+					"bind": "/mnt/data/config/lidarr",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/lidarr/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/portainer/Music",
+					"bind": "/mnt/data/appdata/lidarr/music",
 					"container": "/music"
 				}
 			]
@@ -2510,11 +2516,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/PiHole",
+					"bind": "/mnt/data/config/pihole",
 					"container": "/etc/pihole"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/PiHole/DNS",
+					"bind": "/mnt/data/config/pihole/dns",
 					"container": "/etc/dnsmasq.d"
 				}
 			]
@@ -2531,7 +2537,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2548,7 +2554,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/PiWigo",
+					"bind": "/mnt/data/config/piwigo",
 					"container": "/config"
 				}
 			]
@@ -2567,7 +2573,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -2587,15 +2593,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Plex",
+					"bind": "/mnt/data/config/plex",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/mnt/data/appdata/plex/tv",
 					"container": "/tv"
 				},
 				{
-					"bind": "/portainer/Movies",
+					"bind": "/mnt/data/appdata/plex/movies",
 					"container": "/movies"
 				}
 			]
@@ -2615,7 +2621,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -2637,7 +2643,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/PlexRequests",
+					"bind": "/mnt/data/config/plexrequests",
 					"container": "/config"
 				}
 			]
@@ -2657,7 +2663,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2674,11 +2680,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/ProjectSend",
+					"bind": "/mnt/data/appdata/projectsend",
 					"container": "/data"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/ProjectSend",
+					"bind": "/mnt/data/config/projectsend",
 					"container": "/config"
 				}
 			]
@@ -2705,7 +2711,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/ProtonMail-Bridge",
+					"bind": "/mnt/data/appdata/protonMail-bridge",
 					"container": "/root"
 				}
 			]
@@ -2763,7 +2769,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2780,11 +2786,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Pydio",
+					"bind": "/mnt/data/config/pydio",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Pydio",
+					"bind": "/mnt/data/appdata/pydio",
 					"container": "/data"
 				}
 			]
@@ -2801,7 +2807,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2820,11 +2826,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/qBittorrent",
+					"bind": "/mnt/data/config/qbittorrent",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/qbittorrent/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -2841,7 +2847,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2858,7 +2864,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Quassel-core",
+					"bind": "/mnt/data/config/quassel-core",
 					"container": "/config"
 				}
 			]
@@ -2876,7 +2882,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2893,15 +2899,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Radarr",
+					"bind": "/mnt/data/config/radarr",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/radarr/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/portainer/Movies",
+					"bind": "/mnt/data/appdata/radarr/movies",
 					"container": "/movies"
 				}
 			]
@@ -2924,7 +2930,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/ReactiveResume",
+					"bind": "/mnt/data/config/reactiveresume",
 					"container": "/usr/src/app"
 				}
 			]
@@ -2944,7 +2950,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -2958,14 +2964,14 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Resilio-Sync",
+					"bind": "/mnt/data/config/resilio-sync",
 					"container": "/config"
 				},
 				{
 					"container": "/sync"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/resilio-sync/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -2982,7 +2988,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3001,11 +3007,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/ruTorrent",
+					"bind": "/mnt/data/config/rutorrent",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/rutorrent/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -3022,7 +3028,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3040,15 +3046,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Sabnzbd",
+					"bind": "/mnt/data/config/sabnzbd",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/sabnzbd/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/portainer/Downloads/incomplete",
+					"bind": "/mnt/data/appdata/sabnzbd/downloads/incomplete",
 					"container": "/incomplete-downloads"
 				}
 			]
@@ -3071,7 +3077,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Shiori",
+					"bind": "/mnt/data/config/shiori",
 					"container": "/srv/shiori"
 				}
 			]
@@ -3089,7 +3095,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3106,15 +3112,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/SickChill",
+					"bind": "/mnt/data/config/sickchill",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/sickchill/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/mnt/data/appdata/sickchill/tv",
 					"container": "/tv"
 				}
 			]
@@ -3132,7 +3138,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3149,15 +3155,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/SickGear",
+					"bind": "/mnt/data/config/sickgear",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/mnt/data/appdata/sickgear/tv",
 					"container": "/tv"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/sickgear/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -3174,7 +3180,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3191,11 +3197,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Smokeping",
+					"bind": "/mnt/data/config/smokeping",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Smokeping",
+					"bind": "/mnt/data/appdata/smokeping",
 					"container": "/data"
 				}
 			]
@@ -3213,12 +3219,12 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
 			],
-			"image": "linuxserver/sonarr:latest",
+			"image": "linuxserver/sonarr:preview",
 			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sonarr-icon.png",
 			"name": "sonarr",
 			"platform": "linux",
@@ -3230,7 +3236,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Sonarr",
+					"bind": "/mnt/data/config/sonarr",
 					"container": "/config"
 				},
 				{
@@ -3238,11 +3244,11 @@
 					"container": "/dev/rtc"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/mnt/data/appdata/sonarr/tv",
 					"container": "/tv"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/sonarr/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -3262,7 +3268,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3281,10 +3287,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Syncthing",
+					"bind": "/mnt/data/config/syncthing",
 					"container": "/config"
 				},
 				{
+					"bind": "/mnt/data/appdata/syncthing/sync",
 					"container": "/sync"
 				}
 			]
@@ -3302,7 +3309,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3319,11 +3326,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Logs",
+					"bind": "/mnt/data/appdata/tautulli/logs",
 					"container": "/logs"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Tautulli",
+					"bind": "/mnt/data/config/tautulli",
 					"container": "/config"
 				}
 			]
@@ -3340,7 +3347,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3357,7 +3364,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/TheLounge",
+					"bind": "/mnt/data/config/thelounge",
 					"container": "/config"
 				}
 			]
@@ -3380,7 +3387,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/TiddlyWiki",
+					"bind": "/mnt/data/config/tiddlywiki",
 					"container": "/var/lib/tiddlywiki"
 				}
 			]
@@ -3397,7 +3404,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3415,14 +3422,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Transmission",
+					"bind": "/mnt/data/config/transmission",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/Downloads",
+					"bind": "/mnt/data/appdata/transmission/downloads",
 					"container": "/downloads"
 				},
 				{
+					"bind": "/mnt/data/appdata/transmission/watch",
 					"container": "/watch"
 				}
 			]
@@ -3441,7 +3449,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -3476,11 +3484,11 @@
 				"9091:9091/tcp"
 			],
 			"restart_policy": "unless-stopped",
-			"title": "Transmission-OpenVPN",
+			"title": "transmission-openvpn",
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/transmission-openvpn/downloads",
 					"container": "/data"
 				},
 				{
@@ -3501,7 +3509,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3518,7 +3526,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/tt-rss",
+					"bind": "/mnt/data/config/tt-rss",
 					"container": "/config"
 				}
 			]
@@ -3536,7 +3544,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3554,10 +3562,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/TVHeadend",
+					"bind": "/mnt/data/config/tvheadend",
 					"container": "/config"
 				},
 				{
+					"bind": "/mnt/data/appdata/tvheadend/recordings",
 					"container": "/recordings"
 				}
 			]
@@ -3580,7 +3589,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3598,12 +3607,15 @@
 			"type": 1,
 			"volumes": [
 				{
+					"bind": "/mnt/data/appdata/ubooquity/books",
 					"container": "/books"
 				},
 				{
+					"bind": "/mnt/data/appdata/ubooquity/comics",
 					"container": "/comics"
 				},
 				{
+					"bind": "/mnt/data/config/ubooquity",
 					"container": "/config"
 				}
 			]
@@ -3621,7 +3633,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3645,7 +3657,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Unifi",
+					"bind": "/mnt/data/config/unifi",
 					"container": "/config"
 				}
 			]
@@ -3684,7 +3696,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3698,11 +3710,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/WebGrabPlus",
+					"bind": "/mnt/data/config/webgrabplus",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/AppData/WebGrabPlus",
+					"bind": "/mnt/data/appdata/webgrabplus",
 					"container": "/data"
 				}
 			]
@@ -3725,7 +3737,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Whoogle",
+					"bind": "/mnt/data/config/whoogle",
 					"container": "/config"
 				}
 			]
@@ -3748,11 +3760,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Wikijs",
+					"bind": "/mnt/data/config/wikijs",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Wikijs/data",
+					"bind": "/mnt/data/appdata/wikijs/data",
 					"container": "/data"
 				}
 			]
@@ -3763,7 +3775,7 @@
 				"Downloaders"
 			],
 			"description": "YoutubeDL-Material is a Material Design frontend for youtube-dl. It's coded using Angular 9 for the frontend, and Node.js on the backend.",
-			"image": "tzahi12345/youtubedl-material:latest",
+			"image": "tzahi12345/youtubedl-material:nightly-arm",
 			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ytdlm.png",
 			"name": "youtubedl-material",
 			"platform": "linux",
@@ -3775,23 +3787,23 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/YTDLM",
+					"bind": "/mnt/data/config/youtubedl",
 					"container": "/app/appdata"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Youtube/Video",
+					"bind": "/mnt/data/appdata/youtubedl/video",
 					"container": "/app/video"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Youtube/Subscriptions",
+					"bind": "/mnt/data/appdata/youtubedl/subscriptions",
 					"container": "/app/subscriptions"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Youtube/Users",
+					"bind": "/mnt/data/appdata/youtubedl/users",
 					"container": "/app/users"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Youtube/Audio",
+					"bind": "/mnt/data/appdata/youtubedl/audio",
 					"container": "/app/audio"
 				}
 			]
@@ -3808,7 +3820,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -3843,11 +3855,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/UnifFiVideo/Recordings/",
+					"bind": "/mnt/data/appdata/unifivideo/recordings/",
 					"container": "/recordings"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/UniFiVideo/",
+					"bind": "/mnt/data/config/unifivideo/",
 					"container": "/config"
 				}
 			]
@@ -3870,7 +3882,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "yacht",
+					"bind": "/mnt/data/config/yacht",
 					"container": "/config"
 				},
 				{
@@ -3891,7 +3903,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
 				}
@@ -3908,7 +3920,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/ZNC",
+					"bind": "/mnt/data/config/znc",
 					"container": "/config"
 				}
 			]
@@ -3961,11 +3973,11 @@
 					"container": "/etc/localtime"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/mnt/data/appdata/delugeopenvpn/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/DelugeOpenVPN/config",
+					"bind": "/mnt/data/config/delugeopenvpn",
 					"container": "/config"
 				}
 			]
