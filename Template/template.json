@@ -2016,7 +2016,7 @@
     "platform": "linux",
     "restart_policy": "unless-stopped",
     "ports": [
-      "9666:9666/tcp"
+      "6595:6595/tcp"
     ],
     "volumes": [
       {
