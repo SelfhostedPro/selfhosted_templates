@@ -1,6 +1,45 @@
 [
   {
     "type": 1,
+    "title": "Peppermint",
+    "name": "peppermint",
+    "description": "A self hostable ticket managament system.",
+    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/airsonic-logo.png",
+    "image": "pepperlabs/peppermint:latest",
+    "categories": [
+      "tools",
+      "other"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      "5000:5000/tcp"
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "1000"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "100"
+      },
+      {
+        "name": "PORT",
+        "label": "PORT",
+        "set": "5000"
+      },
+      {
+        "name": "MONGO_URI_DOCKER",
+        "label": "MONGO_URI_DOCKER",
+        "set": "mongodb://mongo:27017/peppermint"
+      }
+    ]
+  },
+  {
+    "type": 1,
     "title": "Airsonic",
     "name": "airsonic",
     "description": "Airsonic is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.",
