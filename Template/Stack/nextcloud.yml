@@ -11,7 +11,8 @@ services:
     volumes:
       - /portainer/Files/AppData/Config/Nextcloud/Config:/config
     ports:
-      - ${PORT}:443
+      - ${PORT-HTTPS}:443
+      - ${PORT-HTTP}:80
     restart: unless-stopped
     depends_on:
       - nextcloud_db
