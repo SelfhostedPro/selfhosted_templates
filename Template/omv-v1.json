@@ -868,7 +868,7 @@
       "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/duplicati-icon.png",
       "image": "linuxserver/duplicati:latest",
       "categories": [
-        "Backup:",
+        "Backup",
         "Cloud",
         "Other",
         "Productivity",
@@ -2697,7 +2697,7 @@
       "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/resilio.png",
       "image": "linuxserver/resilio-sync:latest",
       "categories": [
-        "Backup:",
+        "Backup",
         "Cloud",
         "Other",
         "Tools"
@@ -2975,7 +2975,7 @@
       "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/syncthing-icon.png",
       "image": "linuxserver/syncthing:latest",
       "categories": [
-        "Backup:",
+        "Backup",
         "Cloud",
         "Other",
         "Tools"
