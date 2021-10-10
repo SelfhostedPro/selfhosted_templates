@@ -772,6 +772,11 @@
 			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/deluge-icon.png",
 			"namme": "deluge",
 			"platform": "linux",
+			"ports": [
+			    "8112:8112/tcp",
+			    "6881:6881/tcp",
+			    "6881:6881/udp"
+			],
 			"restart_policy": "unless-stopped",
 			"title": "Deluge",
 			"type": 1,
@@ -1437,12 +1442,12 @@
 				{
 					"label": "EMAIL",
 					"name": "EMAIL",
-					"set": "-Xms256m -Xmx512m"
+					"set": "example@mail.com"
 				},
 				{
 					"label": "URL",
 					"name": "URL",
-					"set": "-Xms256m -Xmx512m"
+					"set": "yourdomain.com"
 				},
 				{
 					"label": "SUBDOMAINS",
@@ -1480,7 +1485,7 @@
 					"set": "http"
 				}
 			],
-			"image": "linuxserver/letsencrypt:latest",
+			"image": "linuxserver/swag:latest",
 			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/letsencrypt.png",
 			"name": "letsencrypt",
 			"platform": "linux",
