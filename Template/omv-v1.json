@@ -963,7 +963,7 @@
       "description": "Web File Browser which can be used as a middleware or standalone app.",
       "note": "The default user and password is admin/admin.",
       "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/filebrowser.png",
-      "image": "80x86/filebrowser:latest",
+      "image": "80x86/filebrowser",
       "categories": [
         "Other",
         "Tools"
