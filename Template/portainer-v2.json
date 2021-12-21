@@ -2247,7 +2247,7 @@
 				"Tools"
 			],
 			"description": "Web File Browser which can be used as a middleware or standalone app.",
-			"image": "80x86/filebrowser:latest",
+			"image": "80x86/filebrowser",
 			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/filebrowser.png",
 			"name": "filebrowser",
 			"note": "The default user and password is admin/admin.",
