@@ -381,13 +381,13 @@
   name: deemix
   description: "Deemix is a deezer downloader built from the ashes of Deezloader Remix."
   logo: "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/deemix.png"
-  image: registry.gitlab.com/bockiii/deemix-docker
+  image: ghcr.io/bambanah/deemix:latest
   categories:
     - Other, Music]
   platform: linux
   restart_policy: unless-stopped
   ports:
-    - WebUI: "9666:9666/tcp"
+    - WebUI: "6595:6595/tcp"
   volumes:
     - container: /config
       bind: "!config/DeeMix"
