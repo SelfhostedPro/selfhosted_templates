@@ -54,6 +54,7 @@ All templates are already configured to bind mount to various places on your dri
   - Dashmachine 
   - Davos 
   - Deemix 
+  - Deluge-openvpn
   - Domoticz 
   - Duckdns 
   - Duplicati 

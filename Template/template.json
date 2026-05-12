@@ -2048,6 +2048,87 @@
   },
   {
     "type": 1,
+    "title": "Deluge OpenVPN",
+    "name": "deluge-openvpn",
+    "description": "This container runs Deluge only while an OpenVPN tunnel is active. It bundles configuration files for many popular VPN providers to make setup easier.",
+    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/deluge-icon.png",
+    "image": "sgtsquiggs/deluge-openvpn:latest",
+    "categories": [
+      "Downloaders",
+      "VPN",
+      "Tools"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      "8112:8112/tcp"
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+        "bind": "/portainer/Files/AppData/Config/DelugeOpenVPN"
+      },
+      {
+        "container": "/downloads",
+        "bind": "/portainer/Downloads"
+      },
+      {
+        "container": "/etc/localtime",
+        "bind": "/etc/localtime"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "1000"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "100"
+      },
+      {
+        "name": "UMASK_SET",
+        "label": "UMASK_SET",
+        "set": "022"
+      },
+      {
+        "name": "TZ",
+        "label": "TZ",
+        "set": "Etc/UTC"
+      },
+      {
+        "name": "OPENVPN_PROVIDER",
+        "label": "OPENVPN_PROVIDER",
+        "description": "Supported provider name from https://github.com/sgtsquiggs/docker-deluge-openvpn",
+        "set": "PIA"
+      },
+      {
+        "name": "OPENVPN_CONFIG",
+        "label": "OPENVPN_CONFIG",
+        "set": ""
+      },
+      {
+        "name": "OPENVPN_USERNAME",
+        "label": "OPENVPN_USERNAME",
+        "set": ""
+      },
+      {
+        "name": "OPENVPN_PASSWORD",
+        "label": "OPENVPN_PASSWORD",
+        "set": ""
+      },
+      {
+        "name": "LOCAL_NETWORK",
+        "label": "LOCAL_NETWORK",
+        "set": "192.168.0.0/24"
+      }
+    ],
+    "note": "This image requires NET_ADMIN and /dev/net/tun for OpenVPN. If the container cannot start the tunnel, add that capability and device in Portainer advanced settings."
+  },
+  {
+    "type": 1,
     "title": "Domoticz",
     "name": "domoticz",
     "description": "Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device",
