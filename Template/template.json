@@ -2121,6 +2121,54 @@
   },
   {
     "type": 1,
+    "title": "Cloudflare DDNS",
+    "name": "cloudflare-ddns",
+    "description": "Cloudflare DDNS is a small Alpine Linux based Docker image that updates Cloudflare DNS records when your public IP address changes.",
+    "logo": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/cloudflare.svg",
+    "image": "oznu/cloudflare-ddns:latest",
+    "categories": [
+      "DNS",
+      "Cloud",
+      "Tools"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "env": [
+      {
+        "name": "API_KEY",
+        "label": "Cloudflare API token",
+        "set": ""
+      },
+      {
+        "name": "ZONE",
+        "label": "DNS zone, for example example.com",
+        "set": ""
+      },
+      {
+        "name": "SUBDOMAIN",
+        "label": "Subdomain to update, leave empty for the root zone",
+        "set": ""
+      },
+      {
+        "name": "PROXIED",
+        "label": "Proxy through Cloudflare",
+        "select": [
+          {
+            "text": "No",
+            "value": "false",
+            "default": true
+          },
+          {
+            "text": "Yes",
+            "value": "true"
+          }
+        ]
+      }
+    ],
+    "note": "Create a scoped Cloudflare API token with Zone Settings Read, Zone Read, and DNS Edit permissions for the zone, then enter it as API_KEY."
+  },
+  {
+    "type": 1,
     "title": "Duplicati",
     "name": "duplicati",
     "description": "Free backup software to store encrypted backups online, Duplicati works with standard protocols like FTP, SSH, WebDAV as well as popular services like Microsoft OneDrive, Amazon Cloud Drive and S3, Google Drive, box.com, Mega, hubiC and many others.",
