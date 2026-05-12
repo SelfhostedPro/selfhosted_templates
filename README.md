@@ -44,6 +44,7 @@ All templates are already configured to bind mount to various places on your dri
   - Vaultwarden 
   - Booksonic 
   - Cops 
+  - Calibre
   - Calibre-web 
   - Chevereto 
   - Chowdown 
