@@ -1641,6 +1641,59 @@
   },
   {
     "type": 1,
+    "title": "Calibre",
+    "name": "calibre",
+    "description": "Calibre is a powerful and easy to use e-book manager for organizing, converting, editing, and serving e-books.",
+    "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/calibre-logo.png",
+    "image": "lscr.io/linuxserver/calibre:latest",
+    "categories": [
+      "Books",
+      "Tools"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      "8080:8080/tcp",
+      "8181:8181/tcp",
+      "8081:8081/tcp"
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+        "bind": "/portainer/Files/AppData/Config/Calibre"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "1000"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "100"
+      },
+      {
+        "name": "TZ",
+        "label": "TZ",
+        "set": "Etc/UTC"
+      },
+      {
+        "name": "PASSWORD",
+        "label": "PASSWORD",
+        "set": ""
+      },
+      {
+        "name": "CLI_ARGS",
+        "label": "CLI_ARGS",
+        "set": ""
+      }
+    ],
+    "note": "Access Calibre at https://your-host:8181. LinuxServer recommends seccomp=unconfined and shm-size=1gb for this desktop image if the host supports those advanced settings."
+  },
+  {
+    "type": 1,
     "title": "Calibre Web",
     "name": "calibre-web",
     "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
