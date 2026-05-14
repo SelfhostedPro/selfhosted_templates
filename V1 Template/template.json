@@ -384,6 +384,56 @@
   },
   {
     "type": 1,
+    "title": "Calibre",
+    "name": "calibre",
+    "description": "Calibre is a powerful and easy to use e-book manager. Select `/config/Calibre Library` as the library path during setup. The built-in content server is available on port 8081 after it is enabled in Calibre settings.",
+    "note": "LinuxServer recommends seccomp=unconfined and 1GB shared memory for desktop containers. Configure those options manually if your Portainer setup supports them.",
+    "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/calibre-logo.png",
+    "image": "lscr.io/linuxserver/calibre:latest",
+    "categories": [
+      "Books",
+      "Tools"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      "8181:8181/tcp",
+      "8080:8080/tcp",
+      "8081:8081/tcp"
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+        "bind": "/portainer/Files/AppData/Config/Calibre"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "1000"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "100"
+      },
+      {
+        "name": "TZ",
+        "label": "TZ"
+      },
+      {
+        "name": "PASSWORD",
+        "label": "PASSWORD"
+      },
+      {
+        "name": "CLI_ARGS",
+        "label": "CLI_ARGS"
+      }
+    ]
+  },
+  {
+    "type": 1,
     "title": "Calibre Web",
     "name": "calibre-web",
     "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
