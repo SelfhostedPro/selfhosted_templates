@@ -1643,6 +1643,56 @@
 		},
 		{
 			"categories": [
+				"Books",
+				"Tools"
+			],
+			"description": "Calibre is a powerful and easy to use e-book manager. Select `/config/Calibre Library` as the library path during setup. The built-in content server is available on port 8081 after it is enabled in Calibre settings.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "100",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ"
+				},
+				{
+					"label": "PASSWORD",
+					"name": "PASSWORD"
+				},
+				{
+					"label": "CLI_ARGS",
+					"name": "CLI_ARGS"
+				}
+			],
+			"image": "lscr.io/linuxserver/calibre:latest",
+			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/calibre-logo.png",
+			"name": "calibre",
+			"note": "LinuxServer recommends seccomp=unconfined and 1GB shared memory for desktop containers. Configure those options manually if your Portainer setup supports them.",
+			"platform": "linux",
+			"ports": [
+				"8181:8181/tcp",
+				"8080:8080/tcp",
+				"8081:8081/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Calibre",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/Calibre",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
 				"Cloud",
 				"Books"
 			],
