@@ -47,6 +47,7 @@ All templates are already configured to bind mount to various places on your dri
   - Calibre-web 
   - Chevereto 
   - Chowdown 
+  - Cloudflare DDNS 
   - Code-server 
   - Codiad 
   - Couchpotato 

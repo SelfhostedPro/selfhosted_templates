@@ -1714,6 +1714,52 @@
   },
   {
     "type": 1,
+    "title": "Cloudflare DDNS",
+    "name": "cloudflare-ddns",
+    "description": "This small Alpine Linux based Docker image will allow you to use the free CloudFlare DNS Service as a Dynamic DNS Provider (DDNS).",
+    "logo": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/cloudflare.svg",
+    "image": "oznu/cloudflare-ddns:latest",
+    "categories": [
+      "DNS",
+      "Cloud",
+      "Other",
+      "Tools"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "env": [
+      {
+        "name": "API_KEY",
+        "label": "Cloudflare scoped API token"
+      },
+      {
+        "name": "ZONE",
+        "label": "DNS zone, e.g. example.com"
+      },
+      {
+        "name": "SUBDOMAIN",
+        "label": "Subdomain to update; leave empty for the root zone"
+      },
+      {
+        "name": "PROXIED",
+        "label": "Proxy through Cloudflare",
+        "select": [
+          {
+            "text": "No",
+            "value": "false",
+            "default": true
+          },
+          {
+            "text": "Yes",
+            "value": "true"
+          }
+        ]
+      }
+    ],
+    "note": "Create a scoped Cloudflare API token with Zone Settings Read, Zone Read, and DNS Edit permissions for the zone, then enter it as API_KEY."
+  },
+  {
+    "type": 1,
     "title": "Code Server",
     "name": "code-server",
     "description": "Code-server is VS Code running on a remote server, accessible through the browser.",
